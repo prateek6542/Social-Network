@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "4e43ed2a-b27e-4842-b8ad-5876f520dc51",
+		"name": "Social_Network",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20384890"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@example.com\",\r\n    \"password\": \"user1password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@example.com\",\r\n    \"password\": \"user1password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friend-Requests",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjYyNTEzLCJqdGkiOiJlNWQ0ZjMzZWNiNjU0NGEwODQxNGM3ZmUzNDU0NzY0YyIsInVzZXJfaWQiOjV9.yl9Mqa7IUHcjbgzsv7uwu-HDt4D1nFsNpQ6YbscMDh8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_user\": 6   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friend-requests/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friend-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search-User By email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjYyNTYxLCJqdGkiOiI5NTVhMTliODlmZTA0YTJjODRmY2Q1OTAzY2E4ZGI1ZiIsInVzZXJfaWQiOjZ9.7uH0EumxxdEyxsU_5Hg8qDYxg6napVcj2j_sQYFyGWM"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/search/?q=user2@example.com",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"search",
+						""
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "user2@example.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjYyNTYxLCJqdGkiOiI5NTVhMTliODlmZTA0YTJjODRmY2Q1OTAzY2E4ZGI1ZiIsInVzZXJfaWQiOjZ9.7uH0EumxxdEyxsU_5Hg8qDYxg6napVcj2j_sQYFyGWM"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pending-Requests",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjYyNTYxLCJqdGkiOiI5NTVhMTliODlmZTA0YTJjODRmY2Q1OTAzY2E4ZGI1ZiIsInVzZXJfaWQiOjZ9.7uH0EumxxdEyxsU_5Hg8qDYxg6napVcj2j_sQYFyGWM"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/pending-requests/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"pending-requests",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Friends",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE3NjYyNTYxLCJqdGkiOiI5NTVhMTliODlmZTA0YTJjODRmY2Q1OTAzY2E4ZGI1ZiIsInVzZXJfaWQiOjZ9.7uH0EumxxdEyxsU_5Hg8qDYxg6napVcj2j_sQYFyGWM"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/friends/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"friends",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
