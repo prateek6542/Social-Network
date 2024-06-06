@@ -1,6 +1,6 @@
 # Social Networking Application API
 
-This is a Django REST Framework based API for a social networking application.
+This is a Django REST Framework-based API for a social networking application.
 
 ## Installation
 
@@ -12,45 +12,36 @@ This is a Django REST Framework based API for a social networking application.
 
 ### Setup
 
-1. Clone the repository:
+#### 1. Clone the repository:
 
-   ```bash
+  
    git clone <repository-url>
    cd social_network
-2. Create and activate a virtual environment:
+#### 2. Create and activate a virtual environment:
 
-bash
-Copy code
+
 python -m venv env
 source env/bin/activate  # On Windows use `env\Scripts\activate`
 
-3.Install dependencies:
+#### 3.Install dependencies:
 
-bash
-Copy code
 pip install -r requirements.txt
 
-4.Apply database migrations:
+#### 4. Apply database migrations:
 
-bash
-Copy code
 python manage.py migrate
 
-5. Create a superuser:
+#### 5. Create a superuser:
 
-bash
-Copy code
 python manage.py createsuperuser
 
-6.Run the development server:
+#### 6. Run the development server:
 
-bash
-Copy code
 python manage.py runserver
 
 Access the API at http://127.0.0.1:8000/
 
-7. API Endpoints
+#### 7. API Endpoints
    
 Signup: /signup/ (POST)
 
