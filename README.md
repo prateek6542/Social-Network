@@ -35,25 +35,37 @@ pip install -r requirements.txt
 bash
 Copy code
 python manage.py migrate
+
 5. Create a superuser:
 
 bash
 Copy code
 python manage.py createsuperuser
+
 6.Run the development server:
 
 bash
 Copy code
 python manage.py runserver
+
 Access the API at http://127.0.0.1:8000/
 
 7. API Endpoints
+   
 Signup: /signup/ (POST)
+
 Login: /login/ (POST)
+
 Refresh Token: /token/refresh/ (POST)
+
 User Search: /api/search/?q=query (GET)
+
 Friend Requests: /api/friend-requests/ (GET, POST, PUT, PATCH, DELETE)
+
 Accept Friend Request: /api/friend-requests/{id}/accept/ (POST)
+
 Reject Friend Request: /api/friend-requests/{id}/reject/ (POST)
+
 List Friends: /api/friends/ (GET)
+
 List Pending Requests: /api/pending-requests/ (GET)
